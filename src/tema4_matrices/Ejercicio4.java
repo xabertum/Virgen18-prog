@@ -19,7 +19,11 @@ public class Ejercicio4 {
 	    }
 	}
     }
-
+    /**
+     * 
+     * @param matriz
+     * @return
+     */
     public static int[] sumarPares(int matriz[][]) {
 
 	int suma[] = new int [2];
@@ -45,10 +49,11 @@ public class Ejercicio4 {
      * @param args
      */
     public static void main(String[] args) {
+	
 	int matriz[][] = new int[3][3];
 	int resultado [] = new int [2];	
-	iniciarMatriz(matriz);
 	
+	iniciarMatriz(matriz);
 	resultado = sumarPares(matriz);
 	
 	System.out.println("La suma de los numeros pares es: " + resultado[0]);
