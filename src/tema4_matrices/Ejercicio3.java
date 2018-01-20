@@ -47,6 +47,20 @@ public class Ejercicio3 {
 	System.out.println("numeros pares: " + cont);
     }
     
+    public static void mostrarMatriz (int matriz [][]) {
+	
+	for (int i = 0; i < matriz.length; i++) {
+	    for (int j = 0; j < matriz[i].length; j++) {
+		
+		System.out.print(matriz[i][j] + " ");
+		
+	    }
+	    
+	    System.out.println("");
+	}
+		
+    }
+    
 
     /**
      * @param args
@@ -57,6 +71,7 @@ public class Ejercicio3 {
 	
 	inciarMatriz(matriz);
 	buscarEnMatriz(matriz);
+	mostrarMatriz(matriz);
 	
 		
 	
