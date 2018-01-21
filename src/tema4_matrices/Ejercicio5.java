@@ -79,7 +79,7 @@ public class Ejercicio5 {
 	mostrarMatriz(matriz);
 
 	minMaxMatriz = minMaxMatriz(matriz);
-	
+
 	System.out.println("El maximo es: " + minMaxMatriz[1]);
 	System.out.println("El minimo es: " + minMaxMatriz[0]);
 	System.out.println("La media de la matriz es: " + media(matriz));
