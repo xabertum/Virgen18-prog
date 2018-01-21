@@ -76,7 +76,7 @@ public class Ejercicio4 {
 	for (int i = 0; i < matriz.length; i++) {
 	    for (int j = 0; j < matriz[i].length; j++) {
 
-		if (i % 2 == 0) {
+		if (i % 2 == 0 || j % 2 == 0) {
 		    resultado[0] += matriz[i][j];
 		    cont++;
 
