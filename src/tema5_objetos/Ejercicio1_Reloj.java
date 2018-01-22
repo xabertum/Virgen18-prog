@@ -30,6 +30,7 @@ public class Ejercicio1_Reloj {
 	this.minutos = minutos;
 	this.segundos = segundos;
 	pila = 15;
+	this.franjaHoraria = "AM";
 
     }
 
@@ -182,8 +183,8 @@ public class Ejercicio1_Reloj {
      */
     public static void main(String[] args) {
 
-	Ejercicio1_Reloj reloj = new Ejercicio1_Reloj();
-
+	Ejercicio1_Reloj reloj = new Ejercicio1_Reloj(12,59,59);
+	
 	while (!reloj.estaParado()) {
 	    System.out.println(reloj.toString());
 	    reloj.avanzarReloj();
