@@ -3,6 +3,8 @@
  */
 package tema4_matrices;
 
+import javax.naming.InitialContext;
+
 /**
  * @author xabertum
  *
@@ -38,16 +40,16 @@ public class Ejercicio11 {
 
 	for (int i = 0; i < matriz.length; i++) {
 	    for (int j = 0; j < matriz[i].length; j++) {
-		
-		
-		
+
+		if (i == j)
+		    resultado[0] += matriz[i][j];
+
+		if (i + j == matriz.length - 1)
+		    resultado[1] += matriz[i][j];
+
 	    }
 	}
-	
-	
-	
-	
-	
+
 	return resultado;
 
     }
@@ -57,6 +59,14 @@ public class Ejercicio11 {
      */
     public static void main(String[] args) {
 
+	int matriz [][] = new int [3][3];
+	
+	inciarMatriz(matriz);
+	mostrarMatriz(matriz);
+	
+	System.out.println("Suma diagonal principal: " + sumarDiagonalesMatriz(matriz)[0]);
+	System.out.println("Suma diagonal secundaria: " + sumarDiagonalesMatriz(matriz)[1]);
+	
     }
 
 }
