@@ -181,22 +181,13 @@ public class Ejercicio1_Reloj {
      * @param args
      */
     public static void main(String[] args) {
-	
+
 	Ejercicio1_Reloj reloj = new Ejercicio1_Reloj();
-	
+
 	while (!reloj.estaParado()) {
 	    System.out.println(reloj.toString());
-	    reloj.avanzarReloj();   
-	    
+	    reloj.avanzarReloj();
+
 	}
-	
-	
-	
-	
-	
-	
-	
-
     }
-
 }
