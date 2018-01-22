@@ -32,6 +32,26 @@ public class Ejercicio11 {
 
     }
 
+    public static int[] sumarDiagonalesMatriz(int matriz[][]) {
+
+	int resultado[] = new int[2];
+
+	for (int i = 0; i < matriz.length; i++) {
+	    for (int j = 0; j < matriz[i].length; j++) {
+		
+		
+		
+	    }
+	}
+	
+	
+	
+	
+	
+	return resultado;
+
+    }
+
     /**
      * @param args
      */
