@@ -3,7 +3,6 @@
  */
 package tema4_matrices;
 
-import javax.naming.InitialContext;
 
 /**
  * @author xabertum
