@@ -186,7 +186,7 @@ public class Ejercicio1_Reloj {
 	Ejercicio1_Reloj reloj = new Ejercicio1_Reloj(12,59,59);
 	
 	while (!reloj.estaParado()) {
-	    System.out.println(reloj.toString());
+	    System.out.println(reloj);
 	    reloj.avanzarReloj();
 
 	}
