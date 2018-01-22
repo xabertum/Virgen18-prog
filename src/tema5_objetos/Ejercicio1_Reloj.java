@@ -15,30 +15,26 @@ public class Ejercicio1_Reloj {
     private int pila;
     private boolean modo;
     private String franjaHoraria;
-        
-   
 
     /********** CONSTRUCTORES ********************/
-    
+
     public Ejercicio1_Reloj() {
 	this.pila = 10;
 	this.modo = false;
 	this.franjaHoraria = "AM";
     }
-        
-    
-    public Ejercicio1_Reloj (int horas, int minutos, int segundos) {
-	
+
+    public Ejercicio1_Reloj(int horas, int minutos, int segundos) {
+
 	this.horas = horas;
 	this.minutos = minutos;
 	this.segundos = segundos;
 	pila = 15;
-	
-		
+
     }
-    
+
     /*********** GETTER & SETTERS ************/
-    
+
     public int getHoras() {
 	return horas;
     }
@@ -62,13 +58,89 @@ public class Ejercicio1_Reloj {
     public void setSegundos(int segundos) {
 	this.segundos = segundos;
     }
-    
+
     public int getPila() {
-        return pila;
+	return pila;
     }
 
     public void setPila(int pila) {
-        this.pila = pila;
+	this.pila = pila;
+    }
+
+    /*****************************************/
+
+    public void avanzarReloj() {
+
+	if (this.modo = false) {
+	    this.segundos++;
+
+	    if (this.segundos == 60) {
+		this.segundos = 0;
+		this.minutos++;
+	    }
+
+	    if (this.minutos == 60) {
+		this.minutos = 0;
+		this.horas++;
+	    }
+
+	    if (this.horas == 24) {
+		this.horas = 0;
+	    }
+
+	    this.pila--;
+
+	    try {
+		Thread.sleep(1000);
+	    } catch (Exception e) {
+		// TODO: handle exception
+	    }
+
+	} else {
+	    this.segundos++;
+	    
+	    if (this.segundos == 60) {
+		this.segundos = 0;
+		this.minutos++;
+	    }
+
+	    if (this.minutos == 60) {
+		this.minutos = 0;
+		this.horas++;
+	    }
+	    
+	    if (this.horas == 13) {
+		if (this.franjaHoraria.equals("AM")) this.franjaHoraria = "PM";
+		if (this.franjaHoraria.equals("PM")) this.franjaHoraria = "AM";
+		this.horas = 1;
+	    }
+	    
+	    this.pila--;
+	    
+	    try {
+		Thread.sleep(1000);
+	    } catch (Exception e) {
+		// TODO: handle exception
+	    }
+
+	}
+
+    }
+    
+    /**
+     * Override toString();
+     */
+    @Override
+    public String toString() {
+	
+	String stringReloj;
+	
+	
+	
+	
+	
+	return null;
+	
     }
     
 
