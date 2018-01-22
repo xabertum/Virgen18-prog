@@ -19,7 +19,7 @@ public class Ejercicio1_Reloj {
     /********** CONSTRUCTORES ********************/
 
     public Ejercicio1_Reloj() {
-	this.pila = 10;
+	this.pila = 15;
 	this.modo = false;
 	this.franjaHoraria = "AM";
     }
@@ -181,7 +181,21 @@ public class Ejercicio1_Reloj {
      * @param args
      */
     public static void main(String[] args) {
-	// TODO Auto-generated method stub
+	
+	Ejercicio1_Reloj reloj = new Ejercicio1_Reloj();
+	
+	while (!reloj.estaParado()) {
+	    System.out.println(reloj.toString());
+	    reloj.avanzarReloj();   
+	    
+	}
+	
+	
+	
+	
+	
+	
+	
 
     }
 
