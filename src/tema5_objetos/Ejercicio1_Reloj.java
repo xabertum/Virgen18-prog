@@ -98,7 +98,7 @@ public class Ejercicio1_Reloj {
 
 	} else {
 	    this.segundos++;
-	    
+
 	    if (this.segundos == 60) {
 		this.segundos = 0;
 		this.minutos++;
@@ -108,15 +108,17 @@ public class Ejercicio1_Reloj {
 		this.minutos = 0;
 		this.horas++;
 	    }
-	    
+
 	    if (this.horas == 13) {
-		if (this.franjaHoraria.equals("AM")) this.franjaHoraria = "PM";
-		if (this.franjaHoraria.equals("PM")) this.franjaHoraria = "AM";
+		if (this.franjaHoraria.equals("AM"))
+		    this.franjaHoraria = "PM";
+		if (this.franjaHoraria.equals("PM"))
+		    this.franjaHoraria = "AM";
 		this.horas = 1;
 	    }
-	    
+
 	    this.pila--;
-	    
+
 	    try {
 		Thread.sleep(1000);
 	    } catch (Exception e) {
@@ -126,23 +128,23 @@ public class Ejercicio1_Reloj {
 	}
 
     }
-    
+
     /**
      * Override toString();
      */
     @Override
     public String toString() {
-	
+
 	String stringReloj;
-	
-	
-	
-	
-	
-	return null;
-	
+
+	if (this.modo == false)
+	    stringReloj = horas + ":" + minutos + ":" + segundos;
+	else
+	    stringReloj = horas + ":" + minutos + ":" + segundos + " " + this.franjaHoraria;
+
+	return stringReloj;
+
     }
-    
 
     /**
      * @param args
