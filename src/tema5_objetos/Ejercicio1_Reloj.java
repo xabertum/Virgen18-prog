@@ -147,6 +147,37 @@ public class Ejercicio1_Reloj {
     }
 
     /**
+     * Recarga la pila
+     */
+    public void cargarPila() {
+	this.pila = 15;
+    }
+
+    /**
+     * 
+     * @return
+     */
+    public boolean estaParado() {
+	return (this.pila == 0);
+
+    }
+
+    public void cambiar12() {
+	this.modo = true;
+	if (this.horas > 12)
+	    this.horas -= 12;
+	this.franjaHoraria = "AM";
+
+    }
+
+    public void cambiar24() {
+	this.modo = false;
+	if (this.franjaHoraria.equals("PM"))
+	    this.horas += 12;
+
+    }
+
+    /**
      * @param args
      */
     public static void main(String[] args) {
