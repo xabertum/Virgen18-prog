@@ -31,18 +31,43 @@ public class Coche {
 
     /********** METODOS PRIVADOS ******************/
 
-    private void subirMarcha() {
-	if (this.marchaActual > 0 && this.marchaActual < 5) {
-	    this.marchaActual++;
+    private void subirMarcha(int velocidadSubirMarchas) {
+	if (velocidadSubirMarchas >= 0 && velocidadSubirMarchas <= 30)
+	    marchaActual = marchas[1];
 
-	}
+	if (velocidadSubirMarchas >= 30 && velocidadSubirMarchas <= 50)
+	    marchaActual = marchas[2];
+
+	if (velocidadSubirMarchas >= 50 && velocidadSubirMarchas <= 70)
+	    marchaActual = marchas[3];
+
+	if (velocidadSubirMarchas >= 70 && velocidadSubirMarchas <= 100)
+	    marchaActual = marchas[4];
+
+	if (velocidadSubirMarchas > 100)
+	    marchaActual = marchas[5];
+
+	velocidadActual +=10;
+
     }
 
-    private void bajarMarcha() {
-	if (this.marchaActual > 0 && this.marchaActual < 5) {
-	    this.marchaActual--;
+    private void bajarMarcha(int velocidadBajarMarchas) {
+	if (velocidadBajarMarchas >= 0 && velocidadBajarMarchas <= 30)
+	    marchaActual = marchas[1];
 
-	}
+	if (velocidadBajarMarchas >= 30 && velocidadBajarMarchas <= 50)
+	    marchaActual = marchas[2];
+
+	if (velocidadBajarMarchas >= 50 && velocidadBajarMarchas <= 70)
+	    marchaActual = marchas[3];
+
+	if (velocidadBajarMarchas >= 70 && velocidadBajarMarchas <= 100)
+	    marchaActual = marchas[4];
+
+	if (velocidadBajarMarchas > 100)
+	    marchaActual = marchas[5];
+
+	velocidadActual -=10;
     }
 
     /********* METODOS PUBLICOS ********************/
@@ -50,41 +75,54 @@ public class Coche {
     public void arranca() {
 	this.motorEncendido = true;
     }
+    
+    public void puntoMuerto() {
+	marchaActual = 0;
+    }
 
-    public void simulacion(int velocidad_usuario) {
+    public void simulacion(int velocidad_usuario, int tiempoSimulacion) {
 
-	for (velocidadActual = 0; velocidadActual >= velocidad_usuario; velocidadActual++) {
+	while (velocidadActual < velocidad_usuario) {
 
-	    if (velocidadActual > 0 && velocidadActual <= 30)
-		marchaActual = marchas[1];
+	    subirMarcha(velocidadActual);
+	    System.out.println(toString());
 
-	    if (velocidadActual > 30 && velocidadActual <= 50)
-		marchaActual = marchas[2];
-	    
-	    if (velocidadActual > 50 && velocidadActual <= 70)
-		marchaActual = marchas[3];
-	    
-	    if (velocidadActual > 70 && velocidadActual <= 100)
-		marchaActual = marchas[4];
-	    
-	    if (velocidadActual > 100)
-		marchaActual = marchas[5];
-	    
-	    subirMarcha();
+	    try {
+		Thread.sleep(1000);
+	    } catch (Exception e) {
+		// TODO: handle exception
+	    }
+
+	}
+
+	try {
+	    System.out.println("VELOCIDAD DE CRUCERO");
+	    Thread.sleep(tiempoSimulacion);
+
+	} catch (Exception e) {
+	    // TODO: handle exception
+	}
+
+	while (velocidadActual > 0) {
+
+	    bajarMarcha(velocidadActual);
+	    System.out.println(toString());
+
+	    try {
+		Thread.sleep(1000);
+	    } catch (Exception e) {
+		// TODO: handle exception
+	    }
 
 	}
 
     }
-    
+
     public String toString() {
-	
-	String str_simulacion = "Velocidad: " + velocidadActual + "Marcha: " + marchaActual;
-	
-	
-	return str_simulacion;
-	
+
+	return "Velocidad: " + velocidadActual + " Marcha: " + marchaActual;
+
     }
-    
 
     /********* GETTERS & SETTERS *******************/
     public String getMarca() {
