@@ -40,4 +40,75 @@ public class Coche {
 	}
     }
 
+    
+    
+    /********* GETTERS & SETTERS ****************************/
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public Boolean getMotorEncendido() {
+        return motorEncendido;
+    }
+
+    public void setMotorEncendido(Boolean motorEncendido) {
+        this.motorEncendido = motorEncendido;
+    }
+
+    public int[] getMarchas() {
+        return marchas;
+    }
+
+    public void setMarchas(int[] marchas) {
+        this.marchas = marchas;
+    }
+
+    public int getMarchaActual() {
+        return marchaActual;
+    }
+
+    public void setMarchaActual(int marchaActual) {
+        this.marchaActual = marchaActual;
+    }
+
+    public int getVelocidadActual() {
+        return velocidadActual;
+    }
+
+    public void setVelocidadActual(int velocidadActual) {
+        this.velocidadActual = velocidadActual;
+    }
+
+    
+    
+    
+    
 }
