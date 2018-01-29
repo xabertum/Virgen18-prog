@@ -29,74 +29,111 @@ public class Coche {
 
     }
 
-    
-    /********* GETTERS & SETTERS ****************************/
+    /********** METODOS PRIVADOS ******************/
+
+    private void subirMarcha() {
+	if (this.marchaActual > 0 && this.marchaActual < 5) {
+	    this.marchaActual++;
+
+	}
+    }
+
+    private void bajarMarcha() {
+	if (this.marchaActual > 0 && this.marchaActual < 5) {
+	    this.marchaActual--;
+
+	}
+    }
+
+    /********* METODOS PUBLICOS ********************/
+
+    public void arranca() {
+	this.motorEncendido = true;
+    }
+
+    public void simulacion(int velocidad_usuario) {
+
+	for (velocidadActual = 0; velocidadActual >= velocidad_usuario; velocidadActual++) {
+
+	    if (velocidadActual > 0 && velocidadActual < 30)
+		marchaActual = marchas[1];
+	    if (velocidadActual > 30 && velocidadActual < 50)
+		marchaActual = marchas[2];
+	    if (velocidadActual > 50 && velocidadActual < 70)
+		marchaActual = marchas[3];
+	    if (velocidadActual > 70 && velocidadActual < 100)
+		marchaActual = marchas[4];
+	    if (velocidadActual > 100)
+		marchaActual = marchas[5];
+	    
+
+	}
+
+    }
+
+    /********* GETTERS & SETTERS *******************/
     public String getMarca() {
-        return marca;
+	return marca;
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
+	this.marca = marca;
     }
 
     public String getModelo() {
-        return modelo;
+	return modelo;
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo;
+	this.modelo = modelo;
     }
 
     public String getColor() {
-        return color;
+	return color;
     }
 
     public void setColor(String color) {
-        this.color = color;
+	this.color = color;
     }
 
     public String getMatricula() {
-        return matricula;
+	return matricula;
     }
 
     public void setMatricula(String matricula) {
-        this.matricula = matricula;
+	this.matricula = matricula;
     }
 
     public Boolean getMotorEncendido() {
-        return motorEncendido;
+	return motorEncendido;
     }
 
     public void setMotorEncendido(Boolean motorEncendido) {
-        this.motorEncendido = motorEncendido;
+	this.motorEncendido = motorEncendido;
     }
 
     public int[] getMarchas() {
-        return marchas;
+	return marchas;
     }
 
     public void setMarchas(int[] marchas) {
-        this.marchas = marchas;
+	this.marchas = marchas;
     }
 
     public int getMarchaActual() {
-        return marchaActual;
+	return marchaActual;
     }
 
     public void setMarchaActual(int marchaActual) {
-        this.marchaActual = marchaActual;
+	this.marchaActual = marchaActual;
     }
 
     public int getVelocidadActual() {
-        return velocidadActual;
+	return velocidadActual;
     }
 
     public void setVelocidadActual(int velocidadActual) {
-        this.velocidadActual = velocidadActual;
+	this.velocidadActual = velocidadActual;
     }
 
-    
-    
-    
-    
 }
