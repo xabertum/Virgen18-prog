@@ -75,6 +75,11 @@ public class Coche {
 	}
 
     }
+    
+    public String toString() {
+	
+    }
+    
 
     /********* GETTERS & SETTERS *******************/
     public String getMarca() {
