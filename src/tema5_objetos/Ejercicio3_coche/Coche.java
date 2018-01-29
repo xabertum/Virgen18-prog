@@ -55,17 +55,22 @@ public class Coche {
 
 	for (velocidadActual = 0; velocidadActual >= velocidad_usuario; velocidadActual++) {
 
-	    if (velocidadActual > 0 && velocidadActual < 30)
+	    if (velocidadActual > 0 && velocidadActual <= 30)
 		marchaActual = marchas[1];
-	    if (velocidadActual > 30 && velocidadActual < 50)
+
+	    if (velocidadActual > 30 && velocidadActual <= 50)
 		marchaActual = marchas[2];
-	    if (velocidadActual > 50 && velocidadActual < 70)
+	    
+	    if (velocidadActual > 50 && velocidadActual <= 70)
 		marchaActual = marchas[3];
-	    if (velocidadActual > 70 && velocidadActual < 100)
+	    
+	    if (velocidadActual > 70 && velocidadActual <= 100)
 		marchaActual = marchas[4];
+	    
 	    if (velocidadActual > 100)
 		marchaActual = marchas[5];
 	    
+	    subirMarcha();
 
 	}
 

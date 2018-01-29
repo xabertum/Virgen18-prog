@@ -14,11 +14,13 @@ public class Main {
      */
     public static void main(String[] args) {
 	Coche oCoche1 = new Coche();
-	Coche oCoche2 = new Coche(50, 4);
+	
+	oCoche1.arranca();
+	
 	
 	System.out.println(oCoche1.getMotorEncendido());
 	
-	System.out.println(oCoche2.getMotorEncendido());
+	
 	
 
     }
