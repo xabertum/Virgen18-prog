@@ -29,18 +29,6 @@ public class Coche {
 
     }
 
-    public Coche(int velocidad, int marcha) {
-
-	if (marcha > 0 && marcha < 5) {
-	    this.motorEncendido = true;
-	    this.velocidadActual = velocidad;
-	    this.marchaActual = marchas[marcha];
-	} else {
-	    System.err.println("Marcha incorrecta. Objeto no creado.");
-	}
-    }
-
-    
     
     /********* GETTERS & SETTERS ****************************/
     public String getMarca() {
