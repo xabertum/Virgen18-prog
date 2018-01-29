@@ -78,6 +78,11 @@ public class Coche {
     
     public String toString() {
 	
+	String str_simulacion = "Velocidad: " + velocidadActual + "Marcha: " + marchaActual;
+	
+	
+	return str_simulacion;
+	
     }
     
 
