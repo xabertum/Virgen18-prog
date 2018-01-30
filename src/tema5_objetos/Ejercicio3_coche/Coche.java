@@ -80,13 +80,13 @@ public class Coche {
 	marchaActual = 0;
     }
 
-    public void simulacionAcelera(int velocidad_usuario) {
+    public void simulacionAcelera() {
 
 	subirMarcha(velocidadActual);
 
     }
 
-    public void simulacionDesAcelera(int velocidad_usuario) {
+    public void simulacionDesAcelera() {
 
 	bajarMarcha(velocidadActual);
 

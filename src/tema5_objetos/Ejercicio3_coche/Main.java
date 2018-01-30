@@ -28,7 +28,7 @@ public class Main {
 
 	do {
 
-	    oCoche1.simulacionAcelera(velocidad_usuario);
+	    oCoche1.simulacionAcelera();
 	    System.out.println(oCoche1);
 
 	    try {
@@ -48,7 +48,7 @@ public class Main {
 
 	do {
 
-	    oCoche1.simulacionDesAcelera(velocidad_usuario);
+	    oCoche1.simulacionDesAcelera();
 	    System.out.println(oCoche1);
 
 	    try {
