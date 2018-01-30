@@ -80,43 +80,20 @@ public class Coche {
 	marchaActual = 0;
     }
 
-    public void simulacion(int velocidad_usuario, int tiempoSimulacion) {
-
-	while (velocidadActual < velocidad_usuario) {
-
+    public void simulacionAcelera(int velocidad_usuario) {
+	
 	    subirMarcha(velocidadActual);
-	    System.out.println(toString());
-
-	    try {
-		Thread.sleep(1000);
-	    } catch (Exception e) {
-		// TODO: handle exception
-	    }
-
-	}
-
-	try {
-	    System.out.println("VELOCIDAD DE CRUCERO");
-	    Thread.sleep(tiempoSimulacion);
-
-	} catch (Exception e) {
-	    // TODO: handle exception
-	}
-
-	while (velocidadActual > 0) {
-
-	    bajarMarcha(velocidadActual);
-	    System.out.println(toString());
-
-	    try {
-		Thread.sleep(1000);
-	    } catch (Exception e) {
-		// TODO: handle exception
-	    }
-
-	}
-
+	    
+		
     }
+    
+    public void simulacionDesAcelera(int velocidad_usuario) {
+	
+	    bajarMarcha(velocidadActual);
+	    
+		
+}
+    
 
     public String toString() {
 
