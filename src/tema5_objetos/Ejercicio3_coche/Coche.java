@@ -47,7 +47,7 @@ public class Coche {
 	if (velocidadSubirMarchas > 100)
 	    marchaActual = marchas[5];
 
-	velocidadActual +=10;
+	velocidadActual += 10;
 
     }
 
@@ -67,7 +67,7 @@ public class Coche {
 	if (velocidadBajarMarchas > 100)
 	    marchaActual = marchas[5];
 
-	velocidadActual -=10;
+	velocidadActual -= 10;
     }
 
     /********* METODOS PUBLICOS ********************/
@@ -75,25 +75,22 @@ public class Coche {
     public void arranca() {
 	this.motorEncendido = true;
     }
-    
+
     public void puntoMuerto() {
 	marchaActual = 0;
     }
 
     public void simulacionAcelera(int velocidad_usuario) {
-	
-	    subirMarcha(velocidadActual);
-	    
-		
+
+	subirMarcha(velocidadActual);
+
     }
-    
+
     public void simulacionDesAcelera(int velocidad_usuario) {
-	
-	    bajarMarcha(velocidadActual);
-	    
-		
-}
-    
+
+	bajarMarcha(velocidadActual);
+
+    }
 
     public String toString() {
 
