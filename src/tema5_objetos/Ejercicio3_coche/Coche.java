@@ -29,9 +29,9 @@ public class Coche {
 
     }
 
-    /********** METODOS PRIVADOS ******************/
+    /********* METODOS PUBLICOS ********************/
 
-    private void subirMarcha(int velocidadSubirMarchas) {
+    public void subirMarcha(int velocidadSubirMarchas) {
 	if (velocidadSubirMarchas >= 0 && velocidadSubirMarchas <= 30)
 	    marchaActual = marchas[1];
 
@@ -51,7 +51,7 @@ public class Coche {
 
     }
 
-    private void bajarMarcha(int velocidadBajarMarchas) {
+    public void bajarMarcha(int velocidadBajarMarchas) {
 	if (velocidadBajarMarchas >= 0 && velocidadBajarMarchas <= 30)
 	    marchaActual = marchas[1];
 
@@ -70,7 +70,7 @@ public class Coche {
 	velocidadActual -= 10;
     }
 
-    /********* METODOS PUBLICOS ********************/
+    
 
     public void arranca() {
 	this.motorEncendido = true;
@@ -78,18 +78,6 @@ public class Coche {
 
     public void puntoMuerto() {
 	marchaActual = 0;
-    }
-
-    public void simulacionAcelera() {
-
-	subirMarcha(velocidadActual);
-
-    }
-
-    public void simulacionDesAcelera() {
-
-	bajarMarcha(velocidadActual);
-
     }
 
     public String toString() {

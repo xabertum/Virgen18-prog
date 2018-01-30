@@ -28,7 +28,7 @@ public class Main {
 
 	do {
 
-	    oCoche1.simulacionAcelera();
+	    oCoche1.subirMarcha(oCoche1.getVelocidadActual());
 	    System.out.println(oCoche1);
 
 	    try {
@@ -48,7 +48,7 @@ public class Main {
 
 	do {
 
-	    oCoche1.simulacionDesAcelera();
+	    oCoche1.bajarMarcha(oCoche1.getVelocidadActual());
 	    System.out.println(oCoche1);
 
 	    try {
