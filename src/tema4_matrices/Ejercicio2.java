@@ -68,6 +68,7 @@ public class Ejercicio2 {
 	
 	System.out.println(buscarNumMatriz(matriz, num));
 	mostrarMatriz(matriz);
+	scanner.close();
 	
 	
     }
